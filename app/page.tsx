@@ -90,7 +90,11 @@ export default function HomePage() {
                 <Download className="w-5 h-5 mr-2" />
                 Install OffMode Now
               </Button>
-
+              <a
+                href="https://v0-new-project-allizkwz2he.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+>
               <Button
                 variant="outline"
                 size="lg"
