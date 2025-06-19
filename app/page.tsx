@@ -119,8 +119,7 @@ export default function HomePage() {
                 className="w-full max-w-xs sm:max-w-sm rounded-2xl shadow-2xl hover:scale-105 transition-transform duration-500"
               ></wistia-player>
               {/* Next.js Script components for Wistia */}
-              <Script src="https://fast.wistia.com/player.js" async strategy="lazyOnload" />
-              <Script src="https://fast.wistia.com/embed/2r1nnjoxu9.js" async type="module" strategy="lazyOnload" />
+              <Script src="https://fast.wistia.com/player.js" async strategy="afterInteractive" />
             </div>
 
             {/* Floating elements - Hidden on mobile, simplified on tablet */}
