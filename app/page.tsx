@@ -94,7 +94,7 @@ export default function HomePage() {
                 href="https://v0-new-project-allizkwz2he.vercel.app/"
                 target="_blank"
                 rel="noopener noreferrer"
->
+              >
               <Button
                 variant="outline"
                 size="lg"
@@ -103,6 +103,7 @@ export default function HomePage() {
                 <Play className="w-5 h-5 mr-2" />
                 Watch Demo
               </Button>
+              </a>
             </div>
 
             <p className="text-sm text-gray-500">No mess. No maintenance. Just magic.</p>
@@ -123,7 +124,8 @@ export default function HomePage() {
                 className="w-full max-w-xs sm:max-w-sm rounded-2xl shadow-2xl hover:scale-105 transition-transform duration-500"
               ></wistia-player>
               {/* Next.js Script components for Wistia */}
-              <Script src="https://fast.wistia.com/player.js" async strategy="afterInteractive" />
+              <Script src="https://fast.wistia.com/player.js" async strategy="lazyOnload" />
+              <Script src="https://fast.wistia.com/embed/2r1nnjoxu9.js" async type="module" strategy="lazyOnload" />
             </div>
 
             {/* Floating elements - Hidden on mobile, simplified on tablet */}
