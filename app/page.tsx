@@ -15,6 +15,7 @@ import {
   Eye,
 } from "lucide-react"
 import Image from "next/image"
+import Script from "next/script" // Import Script from next/script
 
 export default function HomePage() {
   return (
@@ -103,18 +104,23 @@ export default function HomePage() {
             <p className="text-sm text-gray-500">No mess. No maintenance. Just magic.</p>
           </div>
 
-          {/* Hero Images */}
+          {/* Hero Video Section */}
           <div className="relative">
-            {/* Video Embed */}
             <div className="relative z-10 flex justify-center">
-              {/* Replace 'WISTIA_VIDEO_ID' with your actual Wistia video ID */}
-              <iframe
-                src="https://fast.wistia.net/embed/iframe/WISTIA_VIDEO_ID?seo=false&videoFoam=true"
-                title="OffMode Product Demo"
-                allow="autoplay; fullscreen; picture-in-picture"
-                allowFullScreen
-                className="w-full max-w-xs sm:max-w-sm h-[400px] sm:h-[600px] rounded-2xl shadow-2xl hover:scale-105 transition-transform duration-500"
-              ></iframe>
+              {/* Wistia Embed Code */}
+              <style
+                dangerouslySetInnerHTML={{
+                  __html: `wistia-player[media-id='2r1nnjoxu9']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/2r1nnjoxu9/swatch'); display: block; filter: blur(5px); padding-top:56.25%; }`,
+                }}
+              />
+              <wistia-player
+                media-id="2r1nnjoxu9"
+                aspect="1.7777777777777777"
+                className="w-full max-w-xs sm:max-w-sm rounded-2xl shadow-2xl hover:scale-105 transition-transform duration-500"
+              ></wistia-player>
+              {/* Next.js Script components for Wistia */}
+              <Script src="https://fast.wistia.com/player.js" async strategy="lazyOnload" />
+              <Script src="https://fast.wistia.com/embed/2r1nnjoxu9.js" async type="module" strategy="lazyOnload" />
             </div>
 
             {/* Floating elements - Hidden on mobile, simplified on tablet */}
@@ -186,7 +192,7 @@ export default function HomePage() {
                         <Volume2 className="w-5 sm:w-6 h-5 sm:h-6 text-white" />
                       </div>
                       <div>
-                        <p className="text-white font-semibold text-sm:text-base">Speaks Like You</p>
+                        <p className="text-white font-semibold text-sm sm:text-base">Speaks Like You</p>
                         <p className="text-gray-400 text-xs sm:text-sm">Responds in your voice and tone</p>
                       </div>
                     </div>
@@ -196,7 +202,7 @@ export default function HomePage() {
                         <Eye className="w-5 sm:w-6 h-5 sm:h-6 text-white" />
                       </div>
                       <div>
-                        <p className="text-white font-semibold text-sm:text-base">Sees Everything</p>
+                        <p className="text-white font-semibold text-sm sm:text-base">Sees Everything</p>
                         <p className="text-gray-400 text-xs sm:text-sm">Monitors communications 24/7</p>
                       </div>
                     </div>
