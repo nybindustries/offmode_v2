@@ -105,14 +105,16 @@ export default function HomePage() {
 
           {/* Hero Images */}
           <div className="relative">
+            {/* Video Embed */}
             <div className="relative z-10 flex justify-center">
-              <Image
-                src="/images/phone-mockup-1.webp"
-                alt="OffMode App Interface"
-                width={400}
-                height={600}
-                className="max-w-xs sm:max-w-sm w-full h-auto hover:scale-105 transition-transform duration-500"
-              />
+              {/* Replace 'WISTIA_VIDEO_ID' with your actual Wistia video ID */}
+              <iframe
+                src="https://fast.wistia.net/embed/iframe/WISTIA_VIDEO_ID?seo=false&videoFoam=true"
+                title="OffMode Product Demo"
+                allow="autoplay; fullscreen; picture-in-picture"
+                allowFullScreen
+                className="w-full max-w-xs sm:max-w-sm h-[400px] sm:h-[600px] rounded-2xl shadow-2xl hover:scale-105 transition-transform duration-500"
+              ></iframe>
             </div>
 
             {/* Floating elements - Hidden on mobile, simplified on tablet */}
@@ -184,7 +186,7 @@ export default function HomePage() {
                         <Volume2 className="w-5 sm:w-6 h-5 sm:h-6 text-white" />
                       </div>
                       <div>
-                        <p className="text-white font-semibold text-sm sm:text-base">Speaks Like You</p>
+                        <p className="text-white font-semibold text-sm:text-base">Speaks Like You</p>
                         <p className="text-gray-400 text-xs sm:text-sm">Responds in your voice and tone</p>
                       </div>
                     </div>
@@ -194,7 +196,7 @@ export default function HomePage() {
                         <Eye className="w-5 sm:w-6 h-5 sm:h-6 text-white" />
                       </div>
                       <div>
-                        <p className="text-white font-semibold text-sm sm:text-base">Sees Everything</p>
+                        <p className="text-white font-semibold text-sm:text-base">Sees Everything</p>
                         <p className="text-gray-400 text-xs sm:text-sm">Monitors communications 24/7</p>
                       </div>
                     </div>
